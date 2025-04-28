@@ -55,4 +55,14 @@ public class Task {
         return status;
     }
 
+    @Override
+    public String toString() {
+        return String.format("id=%d; description=%s; status=%s; createdAt=%s; updatedAt=%s",
+                id,
+                description,
+                status.getStatus(),
+                formatter.format(createdAt),
+                formatter.format(updatedAt)
+        );
+    }
 }

@@ -166,7 +166,11 @@ public class TaskJsonHandler implements ITaskHandler {
         ArrayList<Integer> idList = new ArrayList<>(fileLines.size());
 
         for (String line : fileLines) {
-            idList.add(Integer.parseInt(line.split("; ")[0].split("=")[1]));
+            try {
+                idList.add(Integer.parseInt(line.split("; ")[0].split("=")[1]));
+            } catch (ArrayIndexOutOfBoundsException _) {
+                idList.add(0);
+            }
         }
         return idList;
     }
