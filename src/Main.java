@@ -1,3 +1,4 @@
+import java.io.File;
 import java.util.*;
 
 public class Main {
@@ -12,9 +13,7 @@ public class Main {
 
         Scanner scan = new Scanner(System.in);
 
-
         while (true) {
-
             System.out.print("Enter command: ");
             String command = scan.nextLine();
 

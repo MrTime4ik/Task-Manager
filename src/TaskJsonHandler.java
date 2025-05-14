@@ -4,8 +4,8 @@ import java.util.*;
 
 public class TaskJsonHandler implements ITaskHandler {
 
-    private static final File dir = new File("D:\\tm_data");
-    private static final File file = new File(dir, "task.json");
+    private static File dir = new File("С:\\TaskManagerData");
+    private static File file;
 
     @Override
     public boolean save(Task task) {
@@ -13,6 +13,11 @@ public class TaskJsonHandler implements ITaskHandler {
         ArrayList<String> fileLines = fileToLines().orElse(new ArrayList<>());
         fileLines.add(fields);
         return linesToFile(fileLines);
+    }
+
+    TaskJsonHandler() {
+        dir.mkdir();
+        file = new File(dir, "task.json");
     }
 
     @Override
@@ -231,4 +236,5 @@ public class TaskJsonHandler implements ITaskHandler {
             return false;
         }
     }
+
 }

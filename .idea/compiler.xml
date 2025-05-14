@@ -2,7 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
-      <module name="Task Manager" target="" />
+      <module name="TaskManager" target="" />
     </bytecodeTargetLevel>
   </component>
 </project>
